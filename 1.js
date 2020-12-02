@@ -1,4 +1,4 @@
-console.log("hello");
+console.log("Day 1");
 let fs = require("fs");
 
 const getNumbersThatEqual2020 = () => {
