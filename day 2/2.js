@@ -24,9 +24,6 @@ const passwords = () => {
 			(arrayOfPassword[numberInstrutions[1] - 1] == letterInstrustions &&
 				arrayOfPassword[numberInstrutions[0] - 1] != letterInstrustions)
 		) {
-			console.log(line);
-			console.log(arrayOfPassword[numberInstrutions[0] - 1]);
-			console.log(arrayOfPassword[numberInstrutions[1] - 1]);
 			total++;
 		}
 	});
