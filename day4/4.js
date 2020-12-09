@@ -1,5 +1,5 @@
 let fs = require("fs");
-let data = fs.readFileSync("./day4test.txt", "utf8");
+let data = fs.readFileSync("./day4.txt", "utf8");
 let lines = data.split("\n\n");
 
 function getValidPasswords() {
@@ -27,7 +27,6 @@ function getValidPasswords() {
 				case "byr":
 					if (t[i] < 1920 || t[i] > 2002 || t[i].length != 4) {
 						hasTheStuff = false;
-						console.log("turtle", t[i]);
 					}
 					break;
 				case "iyr":
@@ -75,11 +74,12 @@ function getValidPasswords() {
 						if (nu < 59 || nu > 76) {
 							hasTheStuff = false;
 						}
+					} else if (t[i].slice(-2) != "cm" && t[i].slice(-2) != "in") {
+						hasTheStuff = false;
 					}
 					break;
 
 				default:
-					console.log("herrrrrrreeeeee!", key, hasTheStuff);
 			}
 		});
 
